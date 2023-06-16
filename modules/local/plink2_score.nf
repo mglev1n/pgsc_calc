@@ -44,6 +44,7 @@ process PLINK2_SCORE {
             $args \\
             --error-on-freq-calc \\
             --score $scorefile $args2 \\
+            no-mean-imputation \\
             $input ${geno.baseName} \\
             --out ${meta.id}_${meta.chrom}_${scoremeta.effect_type}_${scoremeta.n}
 
@@ -61,6 +62,7 @@ process PLINK2_SCORE {
             $args \\
             --error-on-freq-calc \\
             --score $scorefile $args2 \\
+            no-mean-imputation \\
             --score-col-nums 3-$maxcol \\
             $input ${geno.baseName} \\
             --out ${meta.id}_${meta.chrom}_${scoremeta.effect_type}_${scoremeta.n}
