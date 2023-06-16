@@ -42,7 +42,7 @@ process PLINK2_SCORE {
             --memory $mem_mb \\
             --seed 31 \\
             $args \\
-            --extract $scorefile \\
+            --error-on-freq-calc \\
             --score $scorefile $args2 \\
             $input ${geno.baseName} \\
             --out ${meta.id}_${meta.chrom}_${scoremeta.effect_type}_${scoremeta.n}
@@ -59,7 +59,7 @@ process PLINK2_SCORE {
             --memory $mem_mb \\
             --seed 31 \\
             $args \\
-            --extract $scorefile \\
+            --error-on-freq-calc \\
             --score $scorefile $args2 \\
             --score-col-nums 3-$maxcol \\
             $input ${geno.baseName} \\
